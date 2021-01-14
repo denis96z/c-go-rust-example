@@ -9,3 +9,7 @@ c-gcc:
 c-clang:
 	clang -S -O2 main1.c -o main1.clang.asm
 	clang -S -O2 main2.c -o main2.clang.asm
+
+.PHONY: go
+go:
+	go tool compile -S main1.go > main1.go.asm
